@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/Cornmanthe3rd-Squareplex-Utilities-tasks.ico" type="image/x-icon">
+    <link rel="stylesheet" href="responsive.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>CRUD</title>
+</head>
+<body>
+    <main class="container">
+        <header class="header">
+            <span>Cadastro dos Funcionários</span>
+            <button id="new">Adicionar</i></button>
+        </header>
+
+        <section class="table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Função</th>
+                        <th>E-mail</th>
+                        <th class="action">Editar</th>
+                        <th class="action">Excluir</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="modal-container">
+            <div class="modal">
+                <form >
+                    <label for="m-nome">Nome</label>
+                    <input type="text" name="nome" id="m-nome" required>
+
+                    <label for="m-funcao">Função</label>
+                    <input type="text" name="funcao" id="m-funcao" required>
+
+                    <label for="m-email">E-mail</label>
+                    <input type="email" name="email" id="m-email" required>
+
+                    <button id="btnsave">Salvar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
