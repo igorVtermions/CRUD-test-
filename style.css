@@ -165,6 +165,13 @@ tbody tr td.action{
     cursor: pointer;
 }
 
+#btnsave{
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .active{
     display: flex;
 }
@@ -197,3 +204,9 @@ td button i{
 td button i:first-child{
     margin-right: 10px;
 }
+
+.bx{
+    color: white;
+    cursor: pointer;
+}
+

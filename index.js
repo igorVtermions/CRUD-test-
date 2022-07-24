@@ -12,7 +12,7 @@ function openModal (edit = false, index = 0){
     modal.classList.add('active')
 
     modal.onclick = e => {
-        if(e.target.className.indexOf('modal-conteiner') != -1){
+        if(e.target.className.indexOf('modal-conteiner') !== -1){
             modal.classList.remove('active')
         }
     }
@@ -59,14 +59,14 @@ function insertItem(item, index){
 }
 
 btnSave.onclick = e => {
-    if(sName.value == '' || sFunction.value =='' || sEmail.value == ''){
+    if(sName.value == '' || sFunction.value == '' || sEmail.value == ''){
         return
     }
 
     e.preventDefault();
 
     if(id !== undefined){
-        iten[id].name = sName.value
+        itens[id].name = sName.value
         itens[id].function = sFunction.value
         itens[id].email = sEmail.value
     }
