@@ -3,6 +3,7 @@ const tbody = document.querySelector('tbody')
 const sName = document.getElementById('m-name')
 const sFunction = document.getElementById('m-function')
 const sEmail = document.getElementById('m-email')
+const sPay = document.getElementById('m-pay')
 const btnSave = document.getElementById('btnsave')
 
 let itens
@@ -21,12 +22,14 @@ function openModal (edit = false, index = 0){
         sName.value = itens[index].name
         sFunction.value = itens[index].function
         sEmail.value = itens[index].email
+        sPay.value = itens[index].pay
         id = index
     }
     else{
         sName.value = ''
         sFunction.value = ''
         sEmail.value = ''
+        sPay.value = ''
     }
 }
 
@@ -47,6 +50,7 @@ function insertItem(item, index){
     <td>${item.name}</td>
     <td>${item.function}</td>
     <td>${item.email}</td>
+    <td>R$ ${item.pay}</td>
     <td class="action">
     <button onclick="editItem(${index})"><i class='bx bx-edit-alt'></i></button>
   </td>
@@ -59,7 +63,7 @@ function insertItem(item, index){
 }
 
 btnSave.onclick = e => {
-    if(sName.value == '' || sFunction.value == '' || sEmail.value == ''){
+    if(sName.value == '' || sFunction.value == '' || sEmail.value == '' || sPay.value == ''){
         return
     }
 
@@ -69,9 +73,10 @@ btnSave.onclick = e => {
         itens[id].name = sName.value
         itens[id].function = sFunction.value
         itens[id].email = sEmail.value
+        itens[id].pay = sPay.value
     }
     else{
-        itens.push({'name': sName.value, 'function': sFunction.value, 'email': sEmail.value})
+        itens.push({'name': sName.value, 'function': sFunction.value, 'email': sEmail.value, 'pay': sPay.value})
     }
 
     setItensBD()
